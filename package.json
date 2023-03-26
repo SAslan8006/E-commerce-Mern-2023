@@ -1,0 +1,30 @@
+{
+  "name": "e-commerce-mern-2023",
+  "version": "1.0.0",
+  "description": "Ecommerce-App-2023",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAslan8006/E-commerce-Mern-2023.git"
+  },
+  "keywords": [],
+  "author": "Süleyman Aslan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SAslan8006/E-commerce-Mern-2023/issues"
+  },
+  "homepage": "https://github.com/SAslan8006/E-commerce-Mern-2023#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0"
+  }
+}
