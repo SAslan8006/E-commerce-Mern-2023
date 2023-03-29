@@ -6,7 +6,7 @@ export const createProductController = async (req, res) => {
   try {
     const { name, description, price, category, quantity, shipping } = req.fields;
     const { photo } = req.files;
-    //validation
+    //alidation
     switch (true) {
       case !name:
         return res.status(500).send({ error: 'Name is Required' });
@@ -55,7 +55,7 @@ export const getProductController = async (req, res) => {
     res.status(200).send({
       success: true,
       counTotal: products.length,
-      message: 'AllProducts ',
+      message: 'ALlProducts ',
       products,
     });
   } catch (error) {
@@ -127,7 +127,7 @@ export const updateProductController = async (req, res) => {
   try {
     const { name, description, price, category, quantity, shipping } = req.fields;
     const { photo } = req.files;
-    //validation
+    //alidation
     switch (true) {
       case !name:
         return res.status(500).send({ error: 'Name is Required' });

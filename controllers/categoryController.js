@@ -9,7 +9,7 @@ export const createCategoryController = async (req, res) => {
     const existingCategory = await categoryModel.findOne({ name });
     if (existingCategory) {
       return res.status(200).send({
-        success: true,
+        success: false,
         message: 'Category Already Exisits',
       });
     }
@@ -19,7 +19,7 @@ export const createCategoryController = async (req, res) => {
     }).save();
     res.status(201).send({
       success: true,
-      message: 'New category created',
+      message: 'new category created',
       category,
     });
   } catch (error) {
@@ -78,7 +78,7 @@ export const singleCategoryController = async (req, res) => {
     const category = await categoryModel.findOne({ slug: req.params.slug });
     res.status(200).send({
       success: true,
-      message: 'Get Single Category Successfully',
+      message: 'Get SIngle Category SUccessfully',
       category,
     });
   } catch (error) {
@@ -92,7 +92,7 @@ export const singleCategoryController = async (req, res) => {
 };
 
 //delete category
-export const deleteCategoryController = async (req, res) => {
+export const deleteCategoryCOntroller = async (req, res) => {
   try {
     const { id } = req.params;
     await categoryModel.findByIdAndDelete(id);
@@ -104,7 +104,7 @@ export const deleteCategoryController = async (req, res) => {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: 'Error while deleting category',
+      message: 'error while deleting category',
       error,
     });
   }
